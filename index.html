@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="themeToggle" class="theme-btn">🌓</button>
+
+    <div id="sidebar">
+    <div class="sidebar-header">📄 My Pages</div>
+    <div class="sidebar-pages" id="pageList"></div>
+    <button class="add-page" id="addPageBtn">➕ New Page</button>
+  </div>
+
+<div id="editor"></div>
+<div class="block hint" contenteditable="false">
+  👋 Welcome! Here's what you can do in this Notion-style editor:
+  <ul>
+    <li>👉 <b>Type '/'</b> to open the block menu (heading, code, quote, todo)</li>
+    <li>🔤 <b>Press Enter</b> to create a new block</li>
+    <li>🔙 <b>Press Backspace</b> on empty block to delete it</li>
+    <li>📦 <b>Drag & Drop</b> blocks to rearrange them</li>
+    <li>📄 <b>Create Multiple Pages</b> from the left sidebar</li>
+    <li>💾 <b>Everything auto-saves</b> in your browser</li>
+  </ul>
+</div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      background: #2c2c2c;
+      border-right: 1px solid #444;
+      padding: 20px 10px;
+      box-shadow: 1px 0 4px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .sidebar-header {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      color: #f0f0f0;
+    }
+
+    .sidebar-pages {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .page-item {
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    .page-item:hover {
+      background: #3a3a3a;
+    }
+
+    .page-item.active {
+      background: #444;
+      font-weight: bold;
+    }
+
+    .add-page {
+      margin-top: 20px;
+      width: 100%;
+      padding: 8px;
+      background: #333;
+      border: 1px solid #555;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    .add-page:hover {
+      background: #444;
+    }
+
+    #editor {
+      margin-left: 240px;
+      padding: 60px 20px 20px;
+      max-width: 700px;
+      min-height: 100vh;
+    }
+
+    .title-block {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      padding: 8px 0;
+      outline: none;
+      white-space: pre-wrap;
+      caret-color: white;
+      min-height: 40px;
+      position: relative;
+    }
+
+    .title-block.empty::before {
+      content: attr(data-placeholder);
+      color: gray;
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .block {
+      font-size: 1rem;
+      line-height: 1.6;
+      padding: 6px 0;
+      outline: none;
+      border: none;
+      background: transparent;
+      caret-color: white;
+    }
+
+    .slash-menu {
+      position: absolute;
+      background: #2c2c2c;
+      border: 1px solid #555;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .slash-menu div {
+      padding: 6px 10px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .slash-menu div:hover {
+      background: #444;
+    }
+
+    .block.dragging {
+      opacity: 0.5;
+    }
+    .block:empty::before {
+  content: attr(data-placeholder);
+  color: #888;
+  pointer-events: none;
+  display: block;
+}
