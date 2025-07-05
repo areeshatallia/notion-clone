@@ -92,7 +92,9 @@ function loadPage() {
 
     const starter = createBlock();
     editor.appendChild(starter);
-    starter.focus();
+        editor.appendChild(starter);
+    title.focus(); // ✅ Keep focus on title
+
   } else {
     blocks.forEach(content => {
       const block = createBlock();
